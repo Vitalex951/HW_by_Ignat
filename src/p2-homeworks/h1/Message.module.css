@@ -1,0 +1,66 @@
+
+.grid {
+    display: grid;
+    grid-template-areas: "i b";
+    grid-template-columns: 200px 1fr;
+
+
+}
+
+.answer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    position: relative;
+    height: 100px;
+    width: 325px;
+    background-color: #F66969;
+    border-radius: 25px 25px 25px 0;
+    grid-area: b;
+
+}
+
+.answer::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    height: 50px;
+    width: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0 -25px 0 0 #F66969;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 90px;
+    grid-area: i;
+    border: 2px solid;
+
+}
+.gridInside {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'm t';
+    border: 2px solid blue;
+}
+
+.nameGrid {
+    /*background-color: lightcyan;*/
+    margin-left: 10px;
+    grid-area: n;
+}
+
+.messageGrid {
+    background-color: aquamarine;
+    grid-area: m;
+    width: auto;
+}
+
+.timeGrid {
+    background-color: antiquewhite;
+    width: auto;
+    grid-area: t;
+}
+
