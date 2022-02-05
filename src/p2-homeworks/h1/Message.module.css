@@ -52,6 +52,7 @@
     margin-top: 5px;
     grid-area: n;
     color: cornflowerblue;
+    font-size: 24px;
 }
 
 .messageGrid {
