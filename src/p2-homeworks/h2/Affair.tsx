@@ -1,5 +1,5 @@
 import React from 'react'
-import {AffairType} from "./HW2";
+import {AffairType, FilterType} from "./HW2";
 import s from './Affairs.module.css';
 
 type AffairPropsType = {
@@ -11,12 +11,19 @@ function Affair(props: AffairPropsType) {
     const deleteCallback = () => {
         console.log(props.affair._id)
         return props.deleteAffairCallback(props.affair._id)
-    }// need to fix
+    }
+    // const someClassMain = (priority: string) => {
+    //     return s.someClass + ' ' +  (s.priority)
+    // }
+
+
+    const someClassMain = s.someClass + ' ' + s[props.affair.priority]
 
     return (
-        <div>
+        <div className={s.divPriorities}>
             <span>{props.affair.name}</span>
-            <span className={s.someClass}>{props.affair.priority}</span>
+            <span className={someClassMain}>{props.affair.priority}</span>
+            {/*<span className={someClassMain(props.affair.priority)}>{props.affair.priority}</span>*/}
             <button className={s.button} onClick={deleteCallback}>X</button>
         </div>
     )
