@@ -1,6 +1,6 @@
 import React from 'react'
 import Affair from './Affair'
-import {AffairPriorityType, AffairType, FilterType} from "./HW2";
+import {AffairType, FilterType} from "./HW2";
 import s from './Affairs.module.css';
 
 type AffairsPropsType = { // need to fix an

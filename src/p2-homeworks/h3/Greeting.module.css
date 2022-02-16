@@ -1,7 +1,32 @@
 .someClass {
 
 }
+.inputName {
+    width: 150px;
+    background-color: #e6abed;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.main {
+    width: 240px;
+    height: 50px;
+}
 
 .error {
-    border: 1px solid red;
+    width: 150px;
+    margin-right: 5px;
+    background-color: #e6abed;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.textError {
+    color: red;
+    font-weight: 700
+}
+.addButton {
+    margin: 0 10px 0 10px;
+    width:40px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px black;
+    background-color: #ede94a;
 }
