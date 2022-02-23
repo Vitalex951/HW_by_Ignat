@@ -6,13 +6,14 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'Please enter text'
 
     const showAlert = () => {
         if (error) {
             alert('введите текст...')
         } else {
             alert(text) // если нет ошибки показать текст
+            setText('')
         }
     }
 
@@ -30,7 +31,7 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
@@ -39,7 +40,8 @@ function HW4() {
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton>
+                <SuperButton red>
+
                     default
                 </SuperButton>
 
@@ -60,7 +62,7 @@ function HW4() {
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                   Home Work 4 {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
